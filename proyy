@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int opcion1;
+    int opcion2;
+    int opcion3;
+    int costetotal;
+    cout<< "Bienvenido!!\n\n";
+    cout<< "1->Brochas de cerca: 15â‚¬-20%\n2->Rodillos: 13â‚¬-15%\n3->Compra los 2\n\n";
+    cout<< "Que desea? ";
+    cin >>opcion1;
+    switch (opcion1)
+   {
+    case 1:
+               system("cls");
+               cout << "Cuantas unidades quiere llevarse? ";
+               cint >> opcion2;
+               cout << "\nSi paga con credito le cuesta: "<<(opcion2*15)-((20/100)*(opcion2*15));
+               cout << "\nY si paga al contado le cuesta: "<<(opcion2*15)-((20/100)*(opcion2*15))-((7/100)*(opcion2*15));
+               break;
+    case 2:
+               system("cls");
+               cout << "Cuantas unidades quiere llevarse? ";
+               cint >> opcion3;
+               cout << "\nSi paga con credito le cuesta: "<<(opcion3*12)-((20/100)*(opcion3*12));
+               cout << "\nY si paga al contado le cuesta: "<<(opcion3*12)-((20/100)*(opcion3*12))-((7/100)*(opcion3*12));   
+               break;
+    case 3:
+               system("cls");
+               cout << "Cuantas unidades quiere llevarse de brochas de cerda? ";
+               cint >> opcion2;
+               cout << "\nSi paga con credito le cuesta: "<<(opcion2*15)-((20/100)*(opcion2*15));
+               cout << "\nY si paga al contado le cuesta: "<<(opcion2*15)-((20/100)*(opcion2*15))-((7/100)*(opcion2*15));
+               cout <<"\n\n\n";
+               cout << "Cuantas unidades quiere llevarse de rodillos? ";
+               cint >> opcion3;
+               cout << "\nSi paga con credito le cuesta: "<<(opcion3*12)-((15/100)*(opcion3*12));
+               cout << "\nY si paga al contado le cuesta: "<<(opcion3*12)-((15/100)*(opcion3*12))-((7/100)*(opcion3*12));
+               cout << "\nEn total le cuesta (con credito): " <<((opcion3*12)-((15/100)*(opcion3*12)))+((opcion2*15)-((20/100)*(opcion2*15)));
+               cout << "\nEn total le cuesta (al contado): " <<((opcion3*12)-((15/100)*(opcion3*12))-((7/100)*(opcion3*12)))+((opcion2*15)-((20/100)*(opcion2*15))-((7/100)*(opcion2*15)));
+               break;     
+
+    default:
+                system("cls");
+                cout << "Opcion Incorrecta, Elija de nuevo";
+                break;
+    }
+}
